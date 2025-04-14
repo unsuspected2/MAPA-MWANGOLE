@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Interativo</title>
+    <style>
+        svg {
+            width: 100%;
+            height: auto;
+        }
+
+        .region {
+            fill: #0853df; /* Cor padrão */
+            stroke: #000; /* Contorno */
+            stroke-width: 1px;
+            transition: fill 0.3s ease-in-out;
+        }
+
+        .region:hover {
+            fill: #002f87; /* Cor ao passar o mouse */
+        }
+
+        .province-label {
+            font-size: 24px;
+            font-weight: bold;
+            text-anchor: middle;
+            fill: black;
+        }
+    </style>
+</head>
+<body>
+
+    <svg viewBox="0 0 10000 10000">
+        <g transform="scale(1, -1) translate(0, -10000)"> <!-- Corrige a rotação -->
+
+            <!-- Província 1 -->
+            <path class="region" d="M979 4944 c-6 -8 -19 -14 -29 -14 -10 0 -28 -12 -41 -26 -59 -65 -69 -74 -89 -74 -12 0 -35 -12 -50 -27 l-28 -26 29 -28 c26 -25 29 -33 29 -92 0 -36 -4 -69 -10 -72 -5 -3 -10 -14 -10 -24 0 -21 47 -35 87 -25 24 7 25 8 20 78 -3 39 -9 86 -13 103 -5 28 -3 34 18 42 13 5 36 27 51 48 27 39 47 53 97 70 l26 8 -37 37 c-32 31 -40 34 -50 22z"/>
+            
+            <!-- Nome da província ajustado -->
+            <text x="1000" y="-4900" class="province-label">Província X</text>
+
+            <!-- Província 2 -->
+            <path class="region" d="M5000 7000 c-6 -8 -19 -14 -29 -14 -10 0 -28 -12 -41 -26 -59 -65 -69 -74 -89 -74 -12 0 -35 -12 -50 -27 l-28 -26 29 -28 c26 -25 29 -33 29 -92 0 -36 -4 -69 -10 -72 -5 -3 -10 -14 -10 -24 0 -21 47 -35 87 -25 24 7 25 8 20 78 -3 39 -9 86 -13 103 -5 28 -3 34 18 42 13 5 36 27 51 48 27 39 47 53 97 70 l26 8 -37 37 c-32 31 -40 34 -50 22z"/>
+            
+            <!-- Nome da província ajustado -->
+            <text x="5050" y="-6950" class="province-label">Província Y</text>
+
+        </g>
+    </svg>
+
+</body>
+</html>
